@@ -8,6 +8,25 @@
 	"item": [
 		{
 			"name": "https://petstore.swagger.io/v2/store/order",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Response Text\", function () {\r",
+							"\tpm.expect(pm.response.text()).to.include(\"placed\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
 			"request": {
 				"method": "POST",
 				"header": [
