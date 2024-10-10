@@ -1,0 +1,16 @@
+name: Newman Run
+
+on:
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  newman:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: matt-ball/newman-action@master
+        with:
+          apiKey: ${{ secrets.postmanApiKey }}
+          collection: 990903-725c30c3-a70d-41cf-9180-780d8603db6b
