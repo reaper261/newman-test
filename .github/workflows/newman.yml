@@ -11,5 +11,5 @@ jobs:
       - uses: actions/checkout@master
       - uses: matt-ball/newman-action@master
         with:
-          apiKey: ${{ secrets.postmanApiKey }}
+          : # apiKey: ${{ secrets.postmanApiKey }}
           collection: Integrate_GitHubAction.json
